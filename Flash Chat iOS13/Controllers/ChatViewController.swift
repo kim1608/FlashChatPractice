@@ -26,6 +26,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         
         self.messageTextfield.delegate = self
         tableView.dataSource = self
+        tableView.delegate = self
         title = K.appName
         navigationItem.hidesBackButton = true
         
@@ -52,8 +53,29 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
                         if let message = Message(rawMessageData: doc.data(), identifier: doc.documentID) {
                             self.messages.append(message)
                         }
-                        
                     }
+                    let message = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2015//06/08/bas-bunar.jpg")
+                    self.messages.append(message)
+                    let message1 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2016%20II//08/29/novina/basta%20(3).jpg")
+                    self.messages.append(message1)
+                    let message2 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://uredjenjedoma.rs/wp-content/uploads/2018/08/bunar-1-novo.jpg")
+                    self.messages.append(message2)
+                    let message3 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://lh3.googleusercontent.com/proxy/e46I7XY8DhQUdK6gZX285aDmU9n0kSghoWMDlkPxQ57wAwRlManfe8DGKguGxFtYeA7GHjXe59t0awIpC8PI")
+                    self.messages.append(message3)
+                    let message4 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://images.kupujemprodajem.com//photos/oglasi/6/96/90782966/big-90782966_5e434602d9cb97-378694171581467076803.jpg")
+                    self.messages.append(message4)
+                    let message5 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://radiogradacac.ba/wp-content/uploads/2018/08/BUNAR-4-RG.jpg")
+                    self.messages.append(message5)
+                    let message6 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2016%20II//08/29/novina/basta%20(3).jpg")
+                    self.messages.append(message6)
+                    let message7 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://uredjenjedoma.rs/wp-content/uploads/2018/08/bunar-1-novo.jpg")
+                    self.messages.append(message7)
+                    let message8 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://lh3.googleusercontent.com/proxy/e46I7XY8DhQUdK6gZX285aDmU9n0kSghoWMDlkPxQ57wAwRlManfe8DGKguGxFtYeA7GHjXe59t0awIpC8PI")
+                    self.messages.append(message8)
+                    let message9 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://images.kupujemprodajem.com//photos/oglasi/6/96/90782966/big-90782966_5e434602d9cb97-378694171581467076803.jpg")
+                    self.messages.append(message9)
+                    let message10 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://radiogradacac.ba/wp-content/uploads/2018/08/BUNAR-4-RG.jpg")
+                    self.messages.append(message10)
                     self.tableView.reloadData()
                 }
             }
@@ -152,7 +174,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-extension ChatViewController: UITableViewDataSource {
+extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
@@ -171,6 +193,16 @@ extension ChatViewController: UITableViewDataSource {
         cell.viewController = self
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let message = messages[indexPath.row]
+        
+        if message.imageURL == nil {
+            return UITableView.automaticDimension
+        } else {
+            return 240.0
+        }
     }
     
 }
