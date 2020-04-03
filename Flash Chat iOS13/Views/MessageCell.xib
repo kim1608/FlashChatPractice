@@ -22,31 +22,35 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPZ-Vl-edI">
                                 <rect key="frame" x="0.0" y="0.0" width="302" height="53"/>
+                                <color key="backgroundColor" name="BrandPurple"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Puc-fG-vJN">
+                                <rect key="frame" x="322" y="0.0" width="40" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABELA!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpq-g1-ES4">
-                                        <rect key="frame" x="10" y="10" width="282" height="33"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Yci-vs-VcT">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bHr-OZ-yBO"/>
+                                            <constraint firstAttribute="width" constant="40" id="w2h-Sh-srt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gai-oH-SBJ">
+                                        <rect key="frame" x="0.0" y="40" width="40" height="13"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="BrandLightPurple"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="BrandPurple"/>
-                                <constraints>
-                                    <constraint firstItem="xpq-g1-ES4" firstAttribute="leading" secondItem="nPZ-Vl-edI" secondAttribute="leading" constant="10" id="0xU-ur-vVy"/>
-                                    <constraint firstAttribute="trailing" secondItem="xpq-g1-ES4" secondAttribute="trailing" constant="10" id="Dh4-B9-rYy"/>
-                                    <constraint firstItem="xpq-g1-ES4" firstAttribute="top" secondItem="nPZ-Vl-edI" secondAttribute="top" constant="10" id="ihV-8q-T5S"/>
-                                    <constraint firstAttribute="bottom" secondItem="xpq-g1-ES4" secondAttribute="bottom" constant="10" id="pBX-7J-9gz"/>
-                                </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Yci-vs-VcT">
-                                <rect key="frame" x="322" y="0.0" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="bHr-OZ-yBO"/>
-                                    <constraint firstAttribute="width" constant="40" id="w2h-Sh-srt"/>
-                                </constraints>
-                            </imageView>
+                            </stackView>
                         </subviews>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LABELA!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpq-g1-ES4">
+                        <rect key="frame" x="171" y="25" width="40" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="BrandLightPurple"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <gestureRecognizers/>
                 <constraints>
@@ -59,6 +63,7 @@
             <gestureRecognizers/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dateLabel" destination="gai-oH-SBJ" id="dbi-1n-mC0"/>
                 <outlet property="label" destination="xpq-g1-ES4" id="Dy4-Ff-Q7M"/>
                 <outlet property="messageBubble" destination="nPZ-Vl-edI" id="svu-Dw-5S7"/>
                 <outlet property="rightImage" destination="Yci-vs-VcT" id="0hu-zP-aWL"/>
