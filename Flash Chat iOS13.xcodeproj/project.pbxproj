@@ -25,6 +25,7 @@
 		ADE65B4A24327BD7002B143F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADE65B4924327BD7002B143F /* GoogleService-Info.plist */; };
 		ADF562762437BFC000EC01FC /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF562742437BFC000EC01FC /* ImageCell.swift */; };
 		ADF562772437BFC000EC01FC /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF562752437BFC000EC01FC /* ImageCell.xib */; };
+		ADF562792437D10000EC01FC /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF562782437D10000EC01FC /* ChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		ADE65B4924327BD7002B143F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADF562742437BFC000EC01FC /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		ADF562752437BFC000EC01FC /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		ADF562782437D10000EC01FC /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		CDDD75F7E376A75BA9CCE974 /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				ADD4982B2433C5C400CE580C /* MessageCell.xib */,
 				ADF562742437BFC000EC01FC /* ImageCell.swift */,
 				ADF562752437BFC000EC01FC /* ImageCell.xib */,
+				ADF562782437D10000EC01FC /* ChatCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
+				ADF562792437D10000EC01FC /* ChatCell.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
 				ADD4982C2433C5C400CE580C /* MessageCell.swift in Sources */,

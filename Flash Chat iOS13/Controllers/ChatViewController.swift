@@ -158,11 +158,19 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.messageCellIdentifier, for: indexPath) as! MessageCell
+        
+        let message = messages[indexPath.row]
+        let identifier: String
+        if message.imageURL != nil {
+            identifier = K.imageCellIdentifier
+        } else {
+            identifier = K.messageCellIdentifier
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ChatCell
         cell.populate(with: messages[indexPath.row])
         cell.viewController = self
+        
         return cell
-
     }
     
 }

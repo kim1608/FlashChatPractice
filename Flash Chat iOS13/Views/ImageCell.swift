@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageCell: UITableViewCell {
+final class ImageCell: ChatCell {
     
     @IBOutlet weak var messageImageView: UIImageView!
     

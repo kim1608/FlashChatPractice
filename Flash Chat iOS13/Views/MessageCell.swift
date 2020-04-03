@@ -8,9 +8,8 @@
 
 import UIKit
 
-class MessageCell: UITableViewCell {
-    weak var viewController: ChatViewController?
-    private var message: Message?
+final class MessageCell: ChatCell {
+    
     
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var label: UILabel!
@@ -23,15 +22,10 @@ class MessageCell: UITableViewCell {
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(cellLongPressed(_:)))
         self.contentView.addGestureRecognizer(gestureRecognizer)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
-    func populate(with message: Message) {
-        self.message = message
+    override func populate(with message: Message) {
+        super.populate(with: message)
+        
         self.label.text = message.body
     }
     
