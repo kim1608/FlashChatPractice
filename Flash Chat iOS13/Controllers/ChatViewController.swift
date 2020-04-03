@@ -54,27 +54,27 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
                             self.messages.append(message)
                         }
                     }
-                    let message = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2015//06/08/bas-bunar.jpg")
+                    let message = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2015//06/08/bas-bunar.jpg", date: Date())
                     self.messages.append(message)
-                    let message1 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2016%20II//08/29/novina/basta%20(3).jpg")
+                    let message1 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2016%20II//08/29/novina/basta%20(3).jpg", date: Date())
                     self.messages.append(message1)
-                    let message2 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://uredjenjedoma.rs/wp-content/uploads/2018/08/bunar-1-novo.jpg")
+                    let message2 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://uredjenjedoma.rs/wp-content/uploads/2018/08/bunar-1-novo.jpg", date: Date())
                     self.messages.append(message2)
-                    let message3 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://lh3.googleusercontent.com/proxy/e46I7XY8DhQUdK6gZX285aDmU9n0kSghoWMDlkPxQ57wAwRlManfe8DGKguGxFtYeA7GHjXe59t0awIpC8PI")
+                    let message3 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://lh3.googleusercontent.com/proxy/e46I7XY8DhQUdK6gZX285aDmU9n0kSghoWMDlkPxQ57wAwRlManfe8DGKguGxFtYeA7GHjXe59t0awIpC8PI", date: Date())
                     self.messages.append(message3)
-                    let message4 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://images.kupujemprodajem.com//photos/oglasi/6/96/90782966/big-90782966_5e434602d9cb97-378694171581467076803.jpg")
+                    let message4 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://images.kupujemprodajem.com//photos/oglasi/6/96/90782966/big-90782966_5e434602d9cb97-378694171581467076803.jpg", date: Date())
                     self.messages.append(message4)
-                    let message5 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://radiogradacac.ba/wp-content/uploads/2018/08/BUNAR-4-RG.jpg")
+                    let message5 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://radiogradacac.ba/wp-content/uploads/2018/08/BUNAR-4-RG.jpg", date: Date())
                     self.messages.append(message5)
-                    let message6 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2016%20II//08/29/novina/basta%20(3).jpg")
+                    let message6 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://www.novosti.rs/upload/images/2016%20II//08/29/novina/basta%20(3).jpg", date: Date())
                     self.messages.append(message6)
-                    let message7 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://uredjenjedoma.rs/wp-content/uploads/2018/08/bunar-1-novo.jpg")
+                    let message7 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://uredjenjedoma.rs/wp-content/uploads/2018/08/bunar-1-novo.jpg", date: Date())
                     self.messages.append(message7)
-                    let message8 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://lh3.googleusercontent.com/proxy/e46I7XY8DhQUdK6gZX285aDmU9n0kSghoWMDlkPxQ57wAwRlManfe8DGKguGxFtYeA7GHjXe59t0awIpC8PI")
+                    let message8 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://lh3.googleusercontent.com/proxy/e46I7XY8DhQUdK6gZX285aDmU9n0kSghoWMDlkPxQ57wAwRlManfe8DGKguGxFtYeA7GHjXe59t0awIpC8PI", date: Date())
                     self.messages.append(message8)
-                    let message9 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://images.kupujemprodajem.com//photos/oglasi/6/96/90782966/big-90782966_5e434602d9cb97-378694171581467076803.jpg")
+                    let message9 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://images.kupujemprodajem.com//photos/oglasi/6/96/90782966/big-90782966_5e434602d9cb97-378694171581467076803.jpg", date: Date())
                     self.messages.append(message9)
-                    let message10 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://radiogradacac.ba/wp-content/uploads/2018/08/BUNAR-4-RG.jpg")
+                    let message10 = Message(sender: "milos@ljubevski.com", body: "Milos", identifier: UUID().uuidString, imageURL: "https://radiogradacac.ba/wp-content/uploads/2018/08/BUNAR-4-RG.jpg", date: Date())
                     self.messages.append(message10)
                     self.tableView.reloadData()
                 }
@@ -103,12 +103,14 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func sendPressed(_ sender: UIButton?) {
         
+        
         if let messageBody = messageTextfield.text,
             !messageBody.isEmpty, 
             let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField: messageSender,
-                K.FStore.bodyField: messageBody]) { (error) in
+                K.FStore.bodyField: messageBody,
+                K.FStore.dateField: messageDateFormatter.string(from: Date())]) { (error) in
                     if let error = error {
                         print("There was an issue, saving data to firestore, \(error)...")
                     } else {

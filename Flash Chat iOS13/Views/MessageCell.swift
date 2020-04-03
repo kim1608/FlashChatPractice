@@ -9,11 +9,16 @@
 import UIKit
 
 final class MessageCell: ChatCell {
-    
-    
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var rightImage: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    private lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter
+    }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +30,9 @@ final class MessageCell: ChatCell {
     
     override func populate(with message: Message) {
         super.populate(with: message)
+        if let date = message.date {
+            self.dateLabel.text = dateFormatter.string(from: date)
+        }
         
         self.label.text = message.body
     }
